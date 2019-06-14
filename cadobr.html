@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/etec.css">
+    <title>Shelf System</title>
+
+    <script>
+
+        function validar(form) {
+            var result = true;
+
+            if (form.titulo.value.length == 0) {
+                result = false;
+                window.alert("Digite o Titulo");
+            }
+
+            if (form.gen.selectedIndex == 0) {
+                result = false;
+                window.alert("Selecione um Gênero");
+            }
+
+            if (form.nome.value.length == 0) {
+                result = false;
+                window.alert("Digite seu Nome");
+            }
+
+            if (form.res.value.length == 0) {
+                result = false;
+                window.alert("Escreva um resumo sobre a Obra");
+            }
+
+             if (form.form.selectedIndex == 0) {
+                result = false;
+                window.alert("Selecione o formato da Obra");
+            }
+
+
+
+
+            return result;
+        }
+
+
+
+    </script>
+</head>
+
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">
+            <img src="img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            Shelf
+        </a>
+
+
+        <a href="Login.html" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Login</a>
+    </nav>
+    <div class="sobre">
+        <a href="manutencao.html">
+            <button type="button" class="btn btn-light">sobre</button>
+        </a>
+    </div>
+    <div class="contato">
+        <a href="manutencao.html">
+            <button type="button" class="btn btn-light">contato</button>
+        </a>
+    </div>
+    <div class="usuario2">
+        <a href="usuario.html">
+            <button type="button" class="btn btn-light">Usuário</button>
+        </a>
+    </div>
+    <div class="obras">
+        <a href="obras.html">
+            <button type="button" class="btn btn-light">Obras</button>
+        </a>
+    </div>
+
+
+
+    <div class="form1">
+        <h2>Cadastro de Obras:</h2>
+        <hr>
+        <form name="form" method="post" action="" onsubmit="return validar(this)">
+            <fieldset>
+                <label>Título</label>
+                <input type="text" name="titulo" size="50" value=""></br>
+                <label>Gênero</label>
+                <select name="gen">
+                    <option selected value="0">Nenhum</option>
+                    <option value="1">Texto Narrativo</option>
+                    <option value="2">Texto Descritivo</option>
+                    <option value="3">Texto Dissertativo-Argumentativo</option>
+                    <option value="4">Texto Expositivo</option>
+                    <option value="5">Texto Injuntivo</option>
+                </select>
+                <label>Outro</label>
+                <input type="text" name="txtnome" size="10" maxlenght="30" /></br>
+
+                <label>Nome do Usuário</label>
+                <input type="text" name="nome" size="50" maxlenght="30" value=""></br>
+                <hr>
+                <label>Resumo da Obra:</label></br>
+                <textarea name="res" cols="50" rows="10" value=""></textarea>
+                <hr>
+                <label>Formato</label>
+                <select name="form">
+                    <option selected value="0">Nenhum</option>
+                    <option value="1">PDF</option>
+                </select>
+            </fieldset>
+            <hr>
+            <p>Obra:</p>
+            <button class="btn btn-primary" type="submit">Buscar Arquivo</button>
+            <hr>
+    </div>
+
+
+    <div class="botao2">
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
+        <button type="reset" class="btn btn-primary">Limpar</button>
+        <a class="btn btn-primary" href="obras.html" role="button">Gerenciamento</a>
+    </div>
+    </form>
+
+    <br>
+    <div class="relative-bottom">
+        <footer style="background-color: rgb(230, 227, 233);">
+            <div class="footer-copyright text-center py-3" style="color: #000000; height: 50px;">© Desenvolvedores:
+                <a style="color: rgb(255, 179, 0)"> Alison Vieira / Henrique Profeta</a>
+            </div>
+        </footer>
+    </div>
+
+
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+
+</html>

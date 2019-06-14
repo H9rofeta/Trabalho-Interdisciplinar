@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/etec.css">
+    <title>Shelf System</title>
+
+    <script>
+        function validar(form) {
+            var result = true
+
+
+            if (form.nome.value.length == 0) {
+                result = false;
+                window.alert("Por favor digite seu Nome !");
+            }
+
+            if (form.data.value.length == 0) {
+                result = false;
+                window.alert("Por favor digite sua data de nascimento !");
+            }
+
+            if (form.email.value.length == 0) {
+                result = false;
+                window.alert("Por favor digite um E-mail valido !");
+            }
+
+            if (form.tell.value.length == 0) {
+                result = false;
+                window.alert("Por favor digite o número de seu telefone !");
+            }
+
+            if (form.senha.value.length == 0) {
+                result = false;
+                window.alert("Digite uma senha !");
+            }
+
+            if (form.senha2.value.length == 0) {
+                result = false;
+                window.alert("Repita a senha !");
+            }
+
+            if (document.form.senha.value != document.form.senha2.value) {
+                result = false;
+                alert("Senhas incorretas, digite ambas iguais !");
+            }
+
+            return result;
+
+        }
+    </script>
+</head>
+
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">
+            <img src="img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            Shelf
+        </a>
+
+
+        <a href="Login.html" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Login</a>
+    </nav>
+    <div class="sobre">
+        <a href="manutencao.html">
+            <button type="button" class="btn btn-light">sobre</button>
+        </a>
+    </div>
+    <div class="contato">
+        <a href="manutencao.html">
+            <button type="button" class="btn btn-light">contato</button>
+        </a>
+    </div>
+    <div class="usuario2">
+        <a href="usuario.html">
+            <button type="button" class="btn btn-light">Usuário</button>
+        </a>
+    </div>
+    <div class="obras">
+        <a href="obras.html">
+            <button type="button" class="btn btn-light">Obras</button>
+        </a>
+    </div>
+    <div class="form">
+        <h2>Cadastro de Usuários:</h2>
+        <hr>
+        <form name="form" method="post" action="alisonvieiracirino@gmail.gt" onsubmit="return validar(this)">
+            <fieldset>
+                <label>Nome</label>
+                <input type="text" name="nome" size="50" maxlenght="30" /></br>
+                <label>Data de Nascimento</label>
+                <input type="text" name="data" size="10" maxlength="10" /></br>
+                <label>E-mail</label>
+                <input type="text" name="email" size="50" maxlenght="50" /></br>
+                <label>Telefone</label>
+                <input type="text" name="tell" size="10" maxlenght="10" /></br>
+                <hr>
+                <label>Senha:</label>
+                <input type="password" name="senha" size="15" maxlength="40" value=""></br>
+                <label>Digite novamente</label>
+                <input type="password" name="senha2" size="15" maxlength="40" value="">
+
+            </fieldset>
+    </div>
+    <div class="botao2">
+        <button type="submit" class=" btn btn-primary" value="Cadastrar" onclick="verificarSenha()">Cadastrar</button>
+        <button type="reset" class="btn btn-primary">Limpar</button>
+        <a class="btn btn-primary" href="usuario.html" role="button">Gerenciamento</a>
+    </div>
+    </form>
+
+    <div class="fixed-bottom">
+        <footer style="background-color: rgb(230, 227, 233);">
+            <div class="footer-copyright text-center py-3" style="color: #000000; height: 50px;">© Desenvolvedores:
+                <a style="color: rgb(255, 179, 0)"> Alison Vieira / Henrique Profeta</a>
+            </div>
+        </footer>
+    </div>
+
+
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+
+</html>
